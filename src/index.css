@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #eaf0f7;
+    color: #1d2a3d;
+    overflow-x: hidden;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .hero-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #d9e2ec;
+}
+
+.leaflet-control-zoom {
+  display: none !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  padding: 1px 4px !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px -2px rgba(29, 42, 61, 0.10);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 13px;
+}
+
+/* Custom marker pulse */
+.pattern-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(29, 42, 61, 0.2);
+}
+
+.report-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(29, 42, 61, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.report-pin:hover {
+  transform: scale(1.15);
+}
+
+/* SOS pulse ring */
+@keyframes sos-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.sos-ring {
+  animation: sos-pulse 2.2s ease-out infinite;
+}
