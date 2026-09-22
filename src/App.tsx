@@ -15,7 +15,7 @@ import { AuthorityAnalytics } from '@/pages/authority/Analytics';
 
 function App() {
   return (
-    <BrowserRouter>
+<BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         {/* Citizen routes */}
         <Route element={<CitizenLayout />}>
