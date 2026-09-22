@@ -564,14 +564,6 @@ evolve SafeSignal into a larger public-safety platform.
 
 ------------------------------------------------------------------------
 
-# 👥 Team
-
-**Team SafeSignal**
-
-Built for hackathon evaluation.
-
-------------------------------------------------------------------------
-
 ## 📄 License
 
 This project is currently intended for hackathon demonstration and
